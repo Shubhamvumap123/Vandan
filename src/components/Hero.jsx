@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowRight, HeartHandshake } from 'lucide-react';
 
 const Hero = () => {

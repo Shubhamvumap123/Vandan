@@ -1,4 +1,3 @@
-import React from 'react';
 import { Users, CheckCircle, Heart, Globe } from 'lucide-react';
 
 const Impact = () => {

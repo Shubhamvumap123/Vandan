@@ -1,5 +1,4 @@
-import React from 'react';
-import { Heart, MapPin, Calendar } from 'lucide-react';
+import { Heart, MapPin } from 'lucide-react';
 
 const Campaigns = () => {
   const campaigns = [
