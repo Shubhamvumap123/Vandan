@@ -35,6 +35,9 @@ const About = () => {
           <p className="text-lg text-gray-600 leading-relaxed">
             Charanvandan is a Section 8 Non‑Profit Organisation registered under the Ministry of Corporate Affairs (Government of India). We provide a trusted platform to help raise funds for medical, education, social & spiritual causes.
           </p>
+          <p className="text-lg text-gray-600 leading-relaxed mt-6">
+            Our mission is to connect compassionate donors with verified causes, deliver transparent impact, and support communities with dignity, trust, and consistent care.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
