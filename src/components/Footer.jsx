@@ -16,16 +16,16 @@ const Footer = () => {
               Section 8 Non‑Profit Organisation registered under the Ministry of Corporate Affairs (Government of India). Earn Blessings by supporting noble causes.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#ff9933] transition-colors">
+              <a href="#contact" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#ff9933] transition-colors">
                 <MessageCircle className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#ff9933] transition-colors">
+              <a href="#about" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#ff9933] transition-colors">
                 <Camera className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#ff9933] transition-colors">
+              <a href="#campaigns" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#ff9933] transition-colors">
                 <Video className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#ff9933] transition-colors">
+              <a href="#home" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#ff9933] transition-colors">
                 <Hash className="w-5 h-5" />
               </a>
             </div>
@@ -35,9 +35,9 @@ const Footer = () => {
             <h4 className="text-lg font-bold mb-6 text-white">Quick Links</h4>
             <ul className="space-y-3 text-sm">
               <li><a href="#about" className="text-gray-400 hover:text-[#ff9933] transition-colors">About Us</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-[#ff9933] transition-colors">How It Works</a></li>
+              <li><a href="#about" className="text-gray-400 hover:text-[#ff9933] transition-colors">How It Works</a></li>
               <li><a href="#campaigns" className="text-gray-400 hover:text-[#ff9933] transition-colors">Explore Campaigns</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-[#ff9933] transition-colors">Our Blogs</a></li>
+              <li><a href="#home" className="text-gray-400 hover:text-[#ff9933] transition-colors">Our Blogs</a></li>
               <li><a href="#contact" className="text-gray-400 hover:text-[#ff9933] transition-colors">Contact Us</a></li>
             </ul>
           </div>
@@ -45,11 +45,11 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-bold mb-6 text-white">Information</h4>
             <ul className="space-y-3 text-sm">
-              <li><a href="#" className="text-gray-400 hover:text-[#ff9933] transition-colors">Login</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-[#ff9933] transition-colors">Refund Policy</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-[#ff9933] transition-colors">Terms & Conditions</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-[#ff9933] transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-[#ff9933] transition-colors">Download 80G Form</a></li>
+              <li><a href="#contact" className="text-gray-400 hover:text-[#ff9933] transition-colors">Login</a></li>
+              <li><a href="#contact" className="text-gray-400 hover:text-[#ff9933] transition-colors">Refund Policy</a></li>
+              <li><a href="#contact" className="text-gray-400 hover:text-[#ff9933] transition-colors">Terms & Conditions</a></li>
+              <li><a href="#contact" className="text-gray-400 hover:text-[#ff9933] transition-colors">Privacy Policy</a></li>
+              <li><a href="#contact" className="text-gray-400 hover:text-[#ff9933] transition-colors">Download 80G Form</a></li>
             </ul>
           </div>
           

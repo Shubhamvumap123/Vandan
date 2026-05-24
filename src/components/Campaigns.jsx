@@ -44,7 +44,7 @@ const Campaigns = () => {
               Support Causes That Matter
             </h3>
           </div>
-          <a href="#" className="hidden md:flex items-center text-[#ff9933] font-semibold hover:text-[#e68a2e] transition-colors">
+          <a href="#campaigns" className="hidden md:flex items-center text-[#ff9933] font-semibold hover:text-[#e68a2e] transition-colors">
             View All Campaigns <Heart className="ml-2 w-4 h-4" />
           </a>
         </div>
@@ -91,9 +91,9 @@ const Campaigns = () => {
                     ></div>
                   </div>
                   
-                  <button className="w-full bg-[#ff9933] hover:bg-[#e68a2e] text-white py-3 rounded-xl font-bold transition-colors">
+                  <a href="#contact" className="w-full inline-flex items-center justify-center bg-[#ff9933] hover:bg-[#e68a2e] text-white py-3 rounded-xl font-bold transition-colors">
                     Donate Now
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
