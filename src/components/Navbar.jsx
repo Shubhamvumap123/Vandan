@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Heart } from 'lucide-react';
 
-const Navbar = () => {
+const Navbar = ({ openModal }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -25,7 +25,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'
+        scrolled ? 'bg-white/90 backdrop-blur-md shadow-md py-3' : 'bg-transparent py-5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -50,12 +50,12 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <a
-              href="#campaigns"
+            <button
+              onClick={openModal}
               className="bg-[#ff9933] hover:bg-[#e68a2e] text-white px-6 py-2.5 rounded-full font-semibold transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               Donate Now
-            </a>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -85,13 +85,15 @@ const Navbar = () => {
               </a>
             ))}
             <div className="pt-4">
-              <a
-                href="#campaigns"
+              <button
+                onClick={(e) => {
+                  setIsOpen(false);
+                  openModal(e);
+                }}
                 className="block w-full text-center bg-[#ff9933] hover:bg-[#e68a2e] text-white px-6 py-3 rounded-md font-semibold transition-colors"
-                onClick={() => setIsOpen(false)}
               >
                 Donate Now
-              </a>
+              </button>
             </div>
           </div>
         </div>

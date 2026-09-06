@@ -1,6 +1,6 @@
 import { ArrowRight, HeartHandshake } from 'lucide-react';
 
-const Hero = () => {
+const Hero = ({ openModal }) => {
   return (
     <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -29,16 +29,16 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">
-            <a 
-              href="#campaigns"
-              className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-full text-white bg-[#ff9933] hover:bg-[#e68a2e] transition-all shadow-[0_0_20px_rgba(255,153,51,0.4)] hover:shadow-[0_0_30px_rgba(255,153,51,0.6)] transform hover:-translate-y-1"
+            <button
+              onClick={openModal}
+              className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-full text-white bg-[#ff9933] hover:bg-[#e68a2e] transition-all shadow-[0_0_20px_rgba(255,153,51,0.4)] hover:shadow-[0_0_30px_rgba(255,153,51,0.6)] transform hover:-translate-y-1 hover:scale-105"
             >
               Start Donating
               <ArrowRight className="ml-2 w-5 h-5" />
-            </a>
+            </button>
             <a 
               href="#about"
-              className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-full text-white bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 transition-all hover:border-white/50"
+              className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-full text-white bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 transition-all hover:border-white/50 transform hover:-translate-y-1 hover:scale-105"
             >
               Learn More
             </a>

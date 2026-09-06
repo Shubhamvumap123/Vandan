@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import { Heart, MapPin } from 'lucide-react';
 
-const Campaigns = () => {
+const Campaigns = ({ openModal }) => {
+  const [selectedCategory, setSelectedCategory] = useState('All');
+
   const campaigns = [
     {
       id: 1,
@@ -34,23 +37,45 @@ const Campaigns = () => {
     }
   ];
 
+  const categories = ['All', 'Spiritual', 'Heritage Restoration'];
+  const filteredCampaigns = selectedCategory === 'All'
+    ? campaigns
+    : campaigns.filter(c => c.category === selectedCategory);
+
   return (
     <section id="campaigns" className="py-24 bg-[#fff0e6]/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-end mb-12">
-          <div className="max-w-2xl">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-8 gap-4">
+          <div className="max-w-2xl w-full">
             <h2 className="text-sm font-bold text-[#ff9933] uppercase tracking-wider mb-2">Our Initiatives</h2>
             <h3 className="text-4xl font-extrabold text-gray-900">
               Support Causes That Matter
             </h3>
           </div>
-          <a href="#campaigns" className="hidden md:flex items-center text-[#ff9933] font-semibold hover:text-[#e68a2e] transition-colors">
+          <a href="#campaigns" className="hidden md:flex items-center text-[#ff9933] font-semibold hover:text-[#e68a2e] transition-colors whitespace-nowrap">
             View All Campaigns <Heart className="ml-2 w-4 h-4" />
           </a>
         </div>
 
+        {/* Filter UI */}
+        <div className="flex flex-wrap gap-3 mb-10">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className={`px-5 py-2 rounded-full text-sm font-bold transition-all ${
+                selectedCategory === category
+                  ? 'bg-[#ff9933] text-white shadow-md'
+                  : 'bg-white text-gray-600 hover:bg-orange-50 border border-gray-200'
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {campaigns.map((campaign) => (
+          {filteredCampaigns.map((campaign) => (
             <div key={campaign.id} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col">
               <div className="relative h-56 overflow-hidden">
                 <img 
@@ -91,9 +116,12 @@ const Campaigns = () => {
                     ></div>
                   </div>
                   
-                  <a href="#contact" className="w-full inline-flex items-center justify-center bg-[#ff9933] hover:bg-[#e68a2e] text-white py-3 rounded-xl font-bold transition-colors">
+                  <button
+                    onClick={openModal}
+                    className="w-full inline-flex items-center justify-center bg-[#ff9933] hover:bg-[#e68a2e] text-white py-3 rounded-xl font-bold transition-colors"
+                  >
                     Donate Now
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>

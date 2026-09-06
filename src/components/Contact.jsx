@@ -82,6 +82,7 @@ const Contact = () => {
                       value={formData.firstName}
                       onChange={handleChange}
                       type="text" 
+                      required
                       className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-[#ff9933] focus:border-transparent transition-all outline-none"
                       placeholder="John"
                     />
@@ -93,6 +94,7 @@ const Contact = () => {
                       value={formData.lastName}
                       onChange={handleChange}
                       type="text" 
+                      required
                       className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-[#ff9933] focus:border-transparent transition-all outline-none"
                       placeholder="Doe"
                     />
@@ -106,6 +108,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     type="email" 
+                    required
                     className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-[#ff9933] focus:border-transparent transition-all outline-none"
                     placeholder="john@example.com"
                   />
@@ -117,6 +120,7 @@ const Contact = () => {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
+                    required
                     className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-[#ff9933] focus:border-transparent transition-all outline-none bg-white"
                   >
                     <option>General Inquiry</option>
@@ -133,6 +137,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows="4" 
+                    required
                     className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-[#ff9933] focus:border-transparent transition-all outline-none resize-none"
                     placeholder="How can we help you?"
                   ></textarea>
